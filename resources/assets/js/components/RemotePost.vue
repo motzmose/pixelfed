@@ -43,6 +43,10 @@
 								<i class="fas fa-certificate text-danger fa-stack-1x"></i>
 								<i class="fas fa-crown text-white fa-sm fa-stack-1x" style="font-size:7px;"></i>
 							</span>
+							<span v-if="status.account.is_company" class="fa-stack" title="Company Account" data-toggle="tooltip" style="height:1em; line-height:1em; max-width:19px;">
+								<i class="fas fa-certificate text-danger fa-stack-1x"></i>
+								<i class="fas fa-building text-white fa-sm fa-stack-1x" style="font-size:7px;"></i>
+							</span>
 							<p class="mb-0" style="font-size: 10px;">
 										<span v-if="loaded && status.taggedPeople.length" class="mb-0">
 											<span class="font-weight-light cursor-pointer" style="color:#718096" title="Tagged People" data-toggle="tooltip" data-placement="bottom" @click="showTaggedPeopleModal()"><i class="fas fa-tag text-lighter"></i> <span class="font-weight-bold">{{status.taggedPeople.length}} Tagged People</span></span>
@@ -101,6 +105,10 @@
 									<span v-if="status.account.is_admin" class="fa-stack" title="Admin Account" data-toggle="tooltip" style="height:1em; line-height:1em; max-width:19px;">
 										<i class="fas fa-certificate text-danger fa-stack-1x"></i>
 										<i class="fas fa-crown text-white fa-sm fa-stack-1x" style="font-size:7px;"></i>
+									</span>
+									<span v-if="status.account.is_company" class="fa-stack" title="Company Account" data-toggle="tooltip" style="height:1em; line-height:1em; max-width:19px;">
+										<i class="fas fa-certificate text-primary fa-stack-1x"></i>
+										<i class="fas fa-building text-white fa-sm fa-stack-1x" style="font-size:7px;"></i>
 									</span>
 									<p class="mb-0" style="font-size: 10px;">
 										<span v-if="loaded && status.taggedPeople.length" class="mb-0">
@@ -905,6 +913,10 @@ export default {
 
 			admin() {
 				return this.user.is_admin == true;
+			},
+
+			company() {
+				return this.user.is_company == true;
 			},
 
 			ownerOrAdmin() {

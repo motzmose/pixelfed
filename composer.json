@@ -44,6 +44,7 @@
 		"symfony/http-kernel": "5.4.8"
 	},
 	"require-dev": {
+		"barryvdh/laravel-ide-helper": "^2.12",
 		"brianium/paratest": "^6.1",
 		"facade/ignition": "^2.3.6",
 		"laravel/telescope": "^4.9",
@@ -74,7 +75,8 @@
 	"extra": {
 		"laravel": {
 			"dont-discover": [
-				"laravel/passport"
+				"laravel/passport",
+				"barryvdh/laravel-ide-helper"
 			]
 		}
 	},

@@ -39,7 +39,7 @@ class AppServiceProvider extends ServiceProvider
 	 */
 	public function boot()
 	{
-		URL::forceScheme('https');
+		URL::forceScheme('http');
 		Schema::defaultStringLength(191);
 		Paginator::useBootstrap();
 		Avatar::observe(AvatarObserver::class);

@@ -274,6 +274,9 @@ class AccountController extends Controller
 			if ($profile->id == $user->id || ($profile->user && $profile->user->is_admin == true)) {
 				return abort(403);
 			}
+			if ($profile->id == $user->id || ($profile->user && $profile->user->is_company == true)) {
+				return abort(403);
+			}
 			$class = get_class($profile);
 			$filterable['id'] = $profile->id;
 			$filterable['type'] = $class;

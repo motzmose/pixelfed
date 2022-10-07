@@ -58,6 +58,11 @@
 					<span class="badge badge-danger badge-sm">ADMIN</span>
 				</p>
 				@endif
+				@if($user->is_company == true)
+				<p class="mb-0">
+					<span class="badge badge-primary badge-sm">COMPANY</span>
+				</p>
+				@endif
 				<p class="mb-0 text-center text-muted">
 					Joined {{$profile->created_at->diffForHumans()}}
 				</p>

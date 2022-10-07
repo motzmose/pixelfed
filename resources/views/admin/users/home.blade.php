@@ -60,6 +60,9 @@
 						@if($user->is_admin)
 						<i class="text-danger fas fa-certificate" title="Admin"></i>
 						@endif
+						@if($user->is_company)
+						<i class="text-info fas fa-certificate" title="Company"></i>
+						@endif
 					</span>
 				</td>
 				<td>

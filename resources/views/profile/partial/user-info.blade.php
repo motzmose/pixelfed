@@ -15,6 +15,11 @@
               <span class="btn btn-outline-danger font-weight-bold py-0">ADMIN</span>
             </span>
             @endif
+            @if($is_company == true)
+            <span class="pl-4">
+              <span class="btn btn-outline-primary font-weight-bold py-0">COMPANY</span>
+            </span>
+            @endif
             @if($owner == true)
             <span class="pl-4">
             <a class="fas fa-cog fa-lg text-muted" href="{{route('settings')}}"></a>

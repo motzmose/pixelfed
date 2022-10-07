@@ -12,7 +12,7 @@ class UserCreate extends Command
      *
      * @var string
      */
-    protected $signature = 'user:create {--name=} {--username=} {--email=} {--password=} {--is_admin=0} {--confirm_email=0}';
+    protected $signature = 'user:create {--name=} {--username=} {--email=} {--password=} {--is_company} {--is_admin=0} {--confirm_email=0}';
 
     /**
      * The console command description.
@@ -53,6 +53,7 @@ class UserCreate extends Command
             $user->email = $o['email'];
             $user->password = bcrypt($o['password']);
             $user->is_admin = (bool) $o['is_admin'];
+            $user->is_company = (bool) $o['is_company'];
             $user->email_verified_at = $o['confirm_email'] ? now() : null;
             $user->save();
 
@@ -90,6 +91,7 @@ class UserCreate extends Command
         }
         
         $is_admin = $this->confirm('Make this user an admin?');
+        $is_company = $this->confirm('Make this user a company?');
         $confirm_email = $this->confirm('Manually verify email address?');
 
         if($this->confirm('Are you sure you want to create this user?') && 
@@ -104,6 +106,7 @@ class UserCreate extends Command
             $user->email = $email;
             $user->password = bcrypt($password);
             $user->is_admin = $is_admin;
+            $user->is_company = $is_company;
             $user->email_verified_at = $confirm_email ? now() : null;
             $user->save();
 

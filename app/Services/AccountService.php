@@ -48,6 +48,7 @@ class AccountService
 		unset(
 			$account['header_bg'],
 			$account['is_admin'],
+			$account['is_company'],
 			$account['last_fetched_at'],
 			$account['local'],
 			$account['location'],
