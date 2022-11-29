@@ -111,7 +111,6 @@ class RegisterController extends Controller
 		];
 
 		$rules = [
-			'agecheck' => 'required|accepted',
 			'name'     => 'nullable|string|max:'.config('pixelfed.max_name_length'),
 			'username' => $usernameRules,
 			'email'    => $emailRules,

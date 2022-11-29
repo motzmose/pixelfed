@@ -63,21 +63,21 @@
 		<div class="card card-body rounded-0 pt-2 pb-4 box-shadow" style="border-top:1px solid #F1F5F8">
 			<ul class="nav nav-pills nav-fill d-flex align-items-middle">
 			  <li class="nav-item">
-				<a class="nav-link text-dark" href="/"><i class="fal fa-home fa-2x"></i></a>
+				<a class="nav-link text-dark" href="/"><i class="fas fa-home fa-2x"></i></a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link text-dark" href="/discover"><i class="fal fa-search fa-2x"></i></a>
+				<a class="nav-link text-dark" href="/timeline/public"><i class="fas fa-stream fa-2x"></i></a>
 			  </li>
 			  <li class="nav-item">
 				<div class="nav-link cursor-pointer text-dark" onclick="App.util.compose.post()">
-					<i class="fal fa-plus-circle fa-2x"></i>
+					<i class="fas fa-plus-circle fa-2x"></i>
 				</div>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link text-dark" href="/account/activity"><i class="fal fa-bell fa-2x"></i></a>
+				<a class="nav-link text-dark" href="/account/activity"><i class="fas fa-bell fa-2x"></i></a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link text-dark" href="/i/me"><i class="fal fa-user fa-2x"></i></a>
+				<a class="nav-link text-dark" href="/i/me"><i class="fas fa-user fa-2x"></i></a>
 			  </li>
 			</ul>
 		</div>

@@ -34,25 +34,25 @@
 					<ul class="navbar-nav align-items-center">
 						<li class="nav-item px-md-2 d-none d-md-block">
 							<a class="nav-link font-weight-bold text-dark" href="/" title="Home" data-toggle="tooltip" data-placement="bottom">
-								<i class="fal fa-home fa-lg" style="font-size: 22px;"></i>
+								<i class="fas fa-home fa-lg" style="font-size: 22px;"></i>
 								<span class="sr-only">Home</span>
 							</a>
 						</li>
 						<li class="nav-item px-md-2">
 							<a class="nav-link font-weight-bold text-dark" href="/account/direct" title="Direct" data-toggle="tooltip" data-placement="bottom">
-								<i class="fal fa-location-circle fa-lg" style="font-size: 22px;"></i>
+								<i class="fas fa-comment fa-lg" style="font-size: 22px;"></i>
 								<span class="sr-only">Direct</span>
 							</a>
 						</li>
 						<li class="nav-item px-md-2 d-none d-md-block">
 							<a class="nav-link font-weight-bold text-dark" href="/account/activity" title="Notifications" data-toggle="tooltip" data-placement="bottom">
-								<i class="fal fa-bell fa-lg" style="font-size: 22px;"></i>
+								<i class="fas fa-bell fa-lg" style="font-size: 22px;"></i>
 								<span class="sr-only">Notifications</span>
 							</a>
 						</li>
 						<li class="nav-item px-md-2 d-none d-md-block">
 							<div class="nav-link btn btn-primary lead btn-sm px-3 py-1 text-white shadow rounded-pill d-flex align-items-center" title="Compose" data-toggle="tooltip" data-placement="bottom" onclick="App.util.compose.post()">
-								<i class="fal fa-plus-circle" style="font-size:14px;margin-right:6px;"></i>
+								<i class="fas fa-plus-circle" style="font-size:14px;margin-right:6px;"></i>
 								New
 							</div>
 						</li>
@@ -67,26 +67,26 @@
 								@if(config('federation.network_timeline'))
 								<a class="dropdown-item lead" href="{{route('timeline.public')}}">
 									<span style="width: 50px;margin-right:14px;">
-										<span class="fal fa-home text-lighter fa-lg"></span>
+										<span class="fas fa-home text-lighter fa-lg"></span>
 									</span>
 									My Feed
 								</a>
 								<a class="dropdown-item lead" href="{{route('timeline.public')}}">
 									<span style="width: 50px;margin-right:14px;">
-										<span class="fal fa-stream text-lighter fa-lg"></span>
+										<span class="fas fa-stream text-lighter fa-lg"></span>
 									</span>
 									Public Feed
 								</a>
 								<a class="dropdown-item lead" href="{{route('timeline.network')}}">
 									<span style="width: 50px;margin-right:14px;">
-										<span class="fal fa-globe text-lighter fa-lg"></span>
+										<span class="fas fa-globe text-lighter fa-lg"></span>
 									</span>
 									Network Feed
 								</a>
 								@else
 								<a class="dropdown-item lead" href="/">
 									<span style="width: 50px;margin-right:14px;">
-										<span class="fal fa-home text-lighter fa-lg"></span>
+										<span class="fas fa-home text-lighter fa-lg"></span>
 									</span>
 									Home
 								</a>
@@ -100,20 +100,20 @@
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item lead" href="{{route('discover')}}">
 									<span style="width: 50px;margin-right:14px;">
-										<span class="fal fa-compass text-lighter fa-lg"></span>
+										<span class="fas fa-compass text-lighter fa-lg"></span>
 									</span>
 									{{__('navmenu.discover')}}
 								</a>
 								{{-- <a class="dropdown-item lead" href="/groups">
 									<span style="width: 50px;margin-right:14px;">
-										<span class="fal fa-user-friends text-lighter"></span>
+										<span class="fas fa-user-friends text-lighter"></span>
 									</span>
 									Groups
 								</a> --}}
 								@if(config_cache('instance.stories.enabled'))
 								<a class="dropdown-item lead" href="/i/stories/new">
 									<span style="width: 50px;margin-right:14px;">
-										<span class="fal fa-history text-lighter fa-lg"></span>
+										<span class="fas fa-history text-lighter fa-lg"></span>
 									</span>
 									Stories
 								</a>
@@ -121,20 +121,20 @@
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item lead" href="/i/me">
 									<span style="width: 50px;margin-right:14px;">
-										<span class="fal fa-user text-lighter fa-lg"></span>
+										<span class="fas fa-user text-lighter fa-lg"></span>
 									</span>
 									{{__('navmenu.myProfile')}}
 								</a>
 								<a class="dropdown-item lead" href="{{route('settings')}}">
 									<span style="width: 50px;margin-right:14px;">
-										<span class="fal fa-cog text-lighter fa-lg"></span>
+										<span class="fas fa-cog text-lighter fa-lg"></span>
 									</span>
 									{{__('navmenu.settings')}}
 								</a>
 								@if(Auth::user()->is_admin == true)
 								<a class="dropdown-item lead" href="{{ route('admin.home') }}">
 									<span style="width: 50px;margin-right:14px;">
-										<span class="fal fa-shield-alt text-lighter fa-lg"></span>
+										<span class="fas fa-shield-alt text-lighter fa-lg"></span>
 									</span>
 									{{__('navmenu.admin')}}
 								</a>
@@ -144,7 +144,7 @@
 								   onclick="event.preventDefault();
 												 document.getElementById('logout-form').submit();">
 									<span style="width: 50px;margin-right:14px;" class="text-lighter">
-										<span class="fal fa-sign-out-alt fa-lg"></span>
+										<span class="fas fa-sign-out-alt fa-lg"></span>
 									</span>
 									<span class="text-lighter">{{ __('navmenu.logout') }}</span>
 								</a>

@@ -150,6 +150,9 @@
 										<span v-if="profile.is_admin" class="btn btn-outline-danger btn-sm py-0 mr-3" title="Admin Account" data-toggle="tooltip">
 											Admin
 										</span>
+										<span v-if="profile.is_company" class="btn btn-outline-danger btn-sm py-0 mr-3" title="Company Account" data-toggle="tooltip">
+											Company
+										</span>
 										<span v-if="relationship && relationship.followed_by" class="btn btn-outline-muted btn-sm py-0 mr-3">Follows You</span>
 										<span>
 											Joined {{joinedAtFormat(profile.created_at)}}
@@ -830,6 +833,7 @@
 			fetchProfile() {
 				axios.get('/api/pixelfed/v1/accounts/' + this.profileId).then(res => {
 					this.profile = res.data;
+					console.log(this.profile)
 				}).then(res => {
 					this.fetchPosts();
 				});

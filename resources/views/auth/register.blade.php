@@ -69,18 +69,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="{{ __('Confirm Password') }}" required>
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-12">
-                                <div class="form-check">
-                                  <input class="form-check-input" name="agecheck" type="checkbox" value="true" id="ageCheck" required>
-                                  <label class="form-check-label" for="ageCheck">
-                                    I am at least 16 years old
-                                  </label>
-                                </div>
-                            </div>
-                        </div>
-
+                        
                         @if(config('captcha.enabled'))
                         <div class="d-flex justify-content-center my-3">
                             {!! Captcha::display() !!}

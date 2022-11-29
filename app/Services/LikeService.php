@@ -71,6 +71,7 @@ class LikeService {
 			'username' => $profile['username'],
 			'url' => $profileUrl,
 			'others' => $status->likes_count >= 3,
+			'count' => $status->likes_count
 		];
 
 		if(request()->user() && request()->user()->profile_id == $status->profile_id) {

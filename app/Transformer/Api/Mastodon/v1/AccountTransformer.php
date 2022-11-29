@@ -12,6 +12,7 @@ class AccountTransformer extends Fractal\TransformerAbstract
 	{
 		$local = $profile->domain == null;
 		$is_admin = !$local ? false : $profile->user->is_admin;
+		$is_company = !$local ? false : $profile->user->is_company;
 		$username = $local ? $profile->username : explode('@', substr($profile->username, 1))[0];
 		return [
 			'id' => (string) $profile->id,
@@ -35,6 +36,7 @@ class AccountTransformer extends Fractal\TransformerAbstract
 			'bot' => false,
 			'software' => 'pixelfed',
 			'is_admin' => (bool) $is_admin,
+			'is_company' => (bool) $is_company,
 		];
 	}
 }

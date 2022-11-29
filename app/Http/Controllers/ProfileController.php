@@ -56,6 +56,7 @@ class ProfileController extends Controller
 			$is_following = false;
 
 			$is_admin = $user->user->is_admin;
+			$is_company = $user->user->is_company;
 			$profile = $user;
 			$settings = [
 				'crawlable' => $settings->crawlable,
@@ -95,6 +96,7 @@ class ProfileController extends Controller
 			}
 
 			$is_admin = is_null($user->domain) ? $user->user->is_admin : false;
+			$is_company = is_null($user->domain) ? $user->user->is_company : false;
 			$profile = $user;
 			$settings = [
 				'crawlable' => $settings->crawlable,

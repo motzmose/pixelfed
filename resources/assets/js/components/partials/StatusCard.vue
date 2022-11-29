@@ -67,6 +67,10 @@
 						<i class="fas fa-certificate text-danger fa-stack-1x"></i>
 						<i class="fas fa-crown text-white fa-sm fa-stack-1x" style="font-size:7px;"></i>
 					</span>
+					<span v-if="status.account.is_company" class="fa-stack" title="Company Account" data-toggle="tooltip" style="height:1em; line-height:1em; max-width:19px;">
+						<i class="fas fa-certificate text-blue fa-stack-1x"></i>
+						<i class="fas fa-building text-white fa-sm fa-stack-1x" style="font-size:7px;"></i>
+					</span>
 					<div class="d-flex align-items-center">
 						<a v-if="status.place" class="small text-decoration-none text-muted" :href="'/discover/places/'+status.place.id+'/'+status.place.slug" title="Location" data-toggle="tooltip"><i class="fas fa-map-marked-alt"></i> {{status.place.name}}, {{status.place.country}}</a>
 					</div>
@@ -124,9 +128,10 @@
 
 			<div class="card-body">
 				<div v-if="reactionBar" class="reactions my-1 pb-2">
-					<h3 v-if="status.favourited" class="fas fa-heart text-danger pr-3 m-0 cursor-pointer" title="Like" v-on:click="likeStatus(status, $event);"></h3>
-					<h3 v-else class="fal fa-heart pr-3 m-0 like-btn text-dark cursor-pointer" title="Like" v-on:click="likeStatus(status, $event);"></h3>
-					<h3 v-if="!status.comments_disabled" class="fal fa-comment text-dark pr-3 m-0 cursor-pointer" title="Comment" v-on:click="commentFocus(status, $event)"></h3>
+					<h3 v-if="status.liked_by.count && status.favourited" class="fas fa-heart text-danger pr-3 m-0 cursor-pointer" title="Like" v-on:click="likeStatus(status, $event);">{{status.liked_by.count}}</h3>
+					<h3 v-else-if="status.liked_by.count" class="fas fa-heart pr-3 m-0 like-btn text-dark cursor-pointer" title="Like" v-on:click="likeStatus(status, $event);">{{status.liked_by.count}}</h3>
+					<h3 v-else class="fas fa-heart pr-3 m-0 like-btn text-dark cursor-pointer" title="Like" v-on:click="likeStatus(status, $event);"></h3>
+					<h3 v-if="!status.comments_disabled" class="fas fa-comment text-dark pr-3 m-0 cursor-pointer" title="Comment" v-on:click="commentFocus(status, $event)"></h3>
 					<span v-if="status.taggedPeople.length" class="float-right">
 						<span class="font-weight-light small" style="color:#718096">
 							<i class="far fa-user" data-toggle="tooltip" title="Tagged People"></i>
