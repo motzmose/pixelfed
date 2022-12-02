@@ -128,10 +128,20 @@
 
 			<div class="card-body">
 				<div v-if="reactionBar" class="reactions my-1 pb-2">
-					<h3 v-if="status.liked_by.count && status.favourited" class="fas fa-heart text-danger pr-3 m-0 cursor-pointer" title="Like" v-on:click="likeStatus(status, $event);">{{status.liked_by.count}}</h3>
-					<h3 v-else-if="status.liked_by.count" class="fas fa-heart pr-3 m-0 like-btn text-dark cursor-pointer" title="Like" v-on:click="likeStatus(status, $event);">{{status.liked_by.count}}</h3>
-					<h3 v-else class="fas fa-heart pr-3 m-0 like-btn text-dark cursor-pointer" title="Like" v-on:click="likeStatus(status, $event);"></h3>
-					<h3 v-if="!status.comments_disabled" class="fas fa-comment text-dark pr-3 m-0 cursor-pointer" title="Comment" v-on:click="commentFocus(status, $event)"></h3>
+					<div v-if="status.liked_by.count && status.favourited" class="btn btn-light btn-outline-dark btn-sm px-3 py-1 shadow rounded-pill align-items-center" v-on:click="likeStatus(status, $event);">
+						<i class="fas fa-heart text-danger pr-3 m-0 cursor-pointer" title="Like"></i>
+						{{status.liked_by.count}}
+					</div>
+					<div v-else-if="status.liked_by.count" class="btn btn-light lead btn-outline-dark btn-sm px-3 py-1 shadow rounded-pill align-items-center" v-on:click="likeStatus(status, $event);">
+						<i class="fas fa-heart pr-3 m-0 like-btn cursor-pointer" title="Like"></i>
+						{{status.liked_by.count}}
+					</div>
+					<div v-else class="btn btn-light lead btn-outline-dark btn-sm px-3 py-1 shadow rounded-pill align-items-center" v-on:click="likeStatus(status, $event);">
+						<i class="fas fa-heart pr-3 m-0 like-btn cursor-pointer" title="Like"></i>
+					</div>
+					<div class="btn btn-light lead btn-outline-dark btn-sm px-3 py-1 shadow rounded-pill align-items-center" v-on:click="commentFocus(status, $event);">
+						<i v-if="!status.comments_disabled" class="fas fa-comment pr-3 m-0 cursor-pointer" title="Comment"></i>
+					</div>
 					<span v-if="status.taggedPeople.length" class="float-right">
 						<span class="font-weight-light small" style="color:#718096">
 							<i class="far fa-user" data-toggle="tooltip" title="Tagged People"></i>
@@ -336,6 +346,10 @@
 					setTimeout(function() {
 						event.target.classList.add('animate__animated', 'animate__bounce');
 					},100);
+					status.liked_by.count++;
+				}
+				else {
+					status.liked_by.count--;
 				}
 			},
 
