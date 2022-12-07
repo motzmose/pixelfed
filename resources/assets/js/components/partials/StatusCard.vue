@@ -136,10 +136,14 @@
 						<i class="fas fa-heart pr-3 m-0 like-btn cursor-pointer" title="Like"></i>
 						{{status.liked_by.count}}
 					</div>
+					<div v-else-if="status.favourited" class="btn btn-light lead btn-outline-dark btn-sm px-3 py-1 shadow rounded-pill align-items-center" v-on:click="likeStatus(status, $event);">
+						<i class="fas fa-heart text-danger pr-3 m-0 like-btn cursor-pointer" title="Like"></i>
+						1
+					</div>
 					<div v-else class="btn btn-light lead btn-outline-dark btn-sm px-3 py-1 shadow rounded-pill align-items-center" v-on:click="likeStatus(status, $event);">
 						<i class="fas fa-heart pr-3 m-0 like-btn cursor-pointer" title="Like"></i>
 					</div>
-					<div class="btn btn-light lead btn-outline-dark btn-sm px-3 py-1 shadow rounded-pill align-items-center" v-on:click="commentFocus(status, $event);">
+					<div v-if="!status.comments_disabled" class="btn btn-light lead btn-outline-dark btn-sm px-3 py-1 shadow rounded-pill align-items-center" v-on:click="commentFocus(status, $event);">
 						<i v-if="!status.comments_disabled" class="fas fa-comment pr-3 m-0 cursor-pointer" title="Comment"></i>
 					</div>
 					<span v-if="status.taggedPeople.length" class="float-right">
