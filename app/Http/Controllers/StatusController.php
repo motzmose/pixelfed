@@ -309,12 +309,16 @@ class StatusController extends Controller
 		]);
 
 		$licenseId = $request->input('license');
+		$caption = $request->input('caption');
 
 		$status->media->each(function($media) use($licenseId) {
 			$media->license = $licenseId;
 			$media->save();
 			Cache::forget('status:transformer:media:attachments:'.$media->status_id);
 		});
+
+		$status->caption = $caption;
+		$status->save();
 
 		return redirect($status->url());
 	}

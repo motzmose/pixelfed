@@ -20,6 +20,10 @@
 							<option value="{{$license['id']}}" {{$status->firstMedia()->license == $license['id'] ? 'selected' : ''}}>{{$license['title']}}</option>
 							@endforeach
 						</select>
+						<label class="font-weight-bold text-muted small">Caption</label>
+						<textarea name="caption" rows="3" placeholder="Edit caption..." class="form-control"></textarea>
+						<label class="font-weight-bold text-muted small">Public/Private</label>
+						
 					</div>
 					<hr>
 					<button class="btn btn-primary btn-block font-weight-bold">Save</button>
