@@ -310,6 +310,8 @@ class StatusController extends Controller
 
 		$licenseId = $request->input('license');
 		$caption = $request->input('caption');
+		$visibility = $this->validateVisibility($request->input('visibility'));
+
 
 		$status->media->each(function($media) use($licenseId) {
 			$media->license = $licenseId;
@@ -317,7 +319,9 @@ class StatusController extends Controller
 			Cache::forget('status:transformer:media:attachments:'.$media->status_id);
 		});
 
-		$status->caption = $caption;
+		$status->rendered = $caption;
+		$status->visibility = $visibility;
+		$status->scope = $visibility;
 		$status->save();
 
 		return redirect($status->url());

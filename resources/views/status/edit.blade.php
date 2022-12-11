@@ -21,9 +21,13 @@
 							@endforeach
 						</select>
 						<label class="font-weight-bold text-muted small">Caption</label>
-						<textarea name="caption" rows="3" placeholder="Edit caption..." class="form-control"></textarea>
+						<textarea class="form-control" name="caption">{{$status->rendered}}</textarea>
 						<label class="font-weight-bold text-muted small">Public/Private</label>
-						
+						<select class="form-control" name="visibility">
+							<option value="public" {{$status->visibility == 'public' ? 'selected' : ''}}>Public</option>
+							<option value="unlisted" {{$status->visibility == 'unlisted' ? 'selected' : ''}}>Unlisted</option>
+							<option value="private" {{$status->visibility == 'private' ? 'selected' : ''}}>Private</option>
+						</select>
 					</div>
 					<hr>
 					<button class="btn btn-primary btn-block font-weight-bold">Save</button>
