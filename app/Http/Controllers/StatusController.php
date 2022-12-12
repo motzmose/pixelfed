@@ -23,6 +23,8 @@ use Illuminate\Support\Str;
 use App\Services\HashidService;
 use App\Services\StatusService;
 use App\Util\Media\License;
+use App\Util\Lexer\Autolink;
+use App\Util\Lexer\Extractor;
 
 class StatusController extends Controller
 {
@@ -309,12 +311,23 @@ class StatusController extends Controller
 		]);
 
 		$licenseId = $request->input('license');
+		$caption = strip_tags($request->input('caption'));
+		$status->rendered = Autolink::create()->autolink($caption);
+		$visibility = $this->validateVisibility($request->input('visibility'));
+
+		// $status->caption = strip_tags($request->caption);
+		// $status->rendered = Autolink::create()->autolink($status->caption);
+
 
 		$status->media->each(function($media) use($licenseId) {
 			$media->license = $licenseId;
 			$media->save();
 			Cache::forget('status:transformer:media:attachments:'.$media->status_id);
 		});
+
+		$status->visibility = $visibility;
+		$status->scope = $visibility;
+		$status->save();
 
 		return redirect($status->url());
 	}
