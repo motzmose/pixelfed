@@ -63,7 +63,6 @@
 				<label for="visibility" class="font-weight-bold text-muted">Visibility</label>
 				<select class="custom-select" v-model="visibility">
 					<option value="public">Public</option>
-					<option value="private">Followers Only</option>
 				</select>
 			</div>
 			<div class="d-flex justify-content-between align-items-center pt-3">

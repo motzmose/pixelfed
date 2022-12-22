@@ -24,7 +24,6 @@
 								<label for="visibility" class="font-weight-bold text-muted">Visibility</label>
 								<select class="custom-select" v-model="collection.visibility">
 									<option value="public">Public</option>
-									<option value="private">Followers Only</option>
 								</select>
 							</div>
 						</form>

@@ -430,17 +430,6 @@
 								</div>
 							</div>
 						</div>
-						<div class="border-bottom d-flex justify-content-between px-4 mb-0 py-2 ">
-							<div>
-								<div class="text-dark ">Contains NSFW Media</div>
-							</div>
-							<div>
-								<div class="custom-control custom-switch" style="z-index: 9999;">
-									<input type="checkbox" class="custom-control-input" id="asnsfw" v-model="nsfw">
-									<label class="custom-control-label" for="asnsfw"></label>
-								</div>
-							</div>
-						</div>
 						<div class="border-bottom">
 							<p class="px-4 mb-0 py-2 cursor-pointer" @click="showTagCard()">Tag people</p>
 						</div>
@@ -731,19 +720,6 @@
 								<div class="media-body">
 									<p class="font-weight-bold mb-1">{{video.title ? video.title.slice(0,70) : 'Untitled'}}</p>
 									<p class="mb-0 text-muted small">{{video.description ? video.description.slice(0,90) : 'No description'}}</p>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="border-bottom d-flex justify-content-between px-4 mb-0 py-2 ">
-							<div>
-								<div class="text-dark ">Contains NSFW Media</div>
-							</div>
-							<div>
-								<div class="custom-control custom-switch" style="z-index: 9999;">
-									<input type="checkbox" class="custom-control-input" id="asnsfw" v-model="nsfw">
-									<label class="custom-control-label" for="asnsfw"></label>
 								</div>
 							</div>
 						</div>
