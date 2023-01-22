@@ -367,11 +367,6 @@
 							</span>
 						</div>
 						<div class="d-flex align-items-center">
-							<div class="custom-control custom-switch mr-3">
-								<input type="checkbox" class="custom-control-input" id="replyModalCWSwitch" v-model="replyNsfw">
-								<label :class="[replyNsfw ? 'custom-control-label font-weight-bold text-dark':'custom-control-label text-lighter']" for="replyModalCWSwitch">Mark as NSFW</label>
-							</div>
-
 							<button class="btn btn-primary btn-sm py-2 px-4 lead text-uppercase font-weight-bold" v-on:click.prevent="commentSubmit(status, $event)" :disabled="replyText.length == 0">
 								{{replySending == true ? 'POSTING' : 'POST'}}
 							</button>

@@ -756,10 +756,6 @@
 						</span>
 					</div>
 					<div class="d-flex align-items-center">
-						<div class="custom-control custom-switch mr-3">
-							<input type="checkbox" class="custom-control-input" id="replyModalCWSwitch" v-model="replySensitive">
-							<label :class="[replySensitive ? 'custom-control-label font-weight-bold text-dark':'custom-control-label text-lighter']" for="replyModalCWSwitch">Mark as NSFW</label>
-						</div>
 						<!-- <select class="custom-select custom-select-sm my-0 mr-2">
 							<option value="public" selected="">Public</option>
 							<option value="unlisted">Unlisted</option>

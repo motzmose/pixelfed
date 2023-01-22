@@ -21,10 +21,6 @@
 									Unfollow
 								</button>
 							</p>
-							<div class="custom-control custom-switch">
-								<input type="checkbox" class="custom-control-input" id="nsfwSwitch" v-model="forceNsfw">
-								<label class="custom-control-label font-weight-bold text-muted" for="nsfwSwitch">Show NSFW Content</label>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -36,23 +32,6 @@
 				<div v-for="(tag, index) in top" class="col-3 p-0 p-sm-2 p-md-3 hashtag-post-square">
 					<a class="card info-overlay card-md-border-0" :href="tag.status.url">
 						<div :class="[tag.status.filter ? 'square ' + tag.status.filter : 'square']">
-							<div v-if="tag.status.sensitive && forceNsfw == false" class="square-content">
-								<blur-hash-image
-									v-if="s.sensitive"
-									width="32"
-									height="32"
-									punch="1"
-									:hash="tag.status.media_attachments[0].blurhash"
-									/>
-							</div>
-							<div v-else class="square-content" :style="'background-image: url('+tag.status.media_attachments[0].preview_url+')'"></div>
-							<div class="info-overlay-text">
-								<h5 class="text-white m-auto font-weight-bold">
-									<span>
-										<span class="fas fa-retweet fa-lg pr-1"></span> {{tag.status.share_count}}
-									</span>
-								</h5>
-							</div>
 						</div>
 					</a>
 				</div>
