@@ -10230,9 +10230,7 @@ var render = function() {
               _c("p", { staticClass: "mb-0 lead font-weight-bold" }, [
                 _vm._v(
                   _vm._s(
-                    _vm.status.spoiler_text
-                      ? _vm.status.spoiler_text
-                      : "CW / NSFW / Hidden Media"
+                    _vm.status.spoiler_text ? _vm.status.spoiler_text : "CW"
                   )
                 )
               ]),

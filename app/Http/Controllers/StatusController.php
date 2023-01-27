@@ -311,8 +311,8 @@ class StatusController extends Controller
 		]);
 
 		$licenseId = $request->input('license');
-		$caption = strip_tags($request->input('caption'));
-		$status->rendered = Autolink::create()->autolink($caption);
+		$status->caption = strip_tags($request->input('caption'));
+		$status->rendered = Autolink::create()->autolink($status->caption);
 		$visibility = $this->validateVisibility($request->input('visibility'));
 
 		// $status->caption = strip_tags($request->caption);
@@ -327,7 +327,7 @@ class StatusController extends Controller
 
 		$status->visibility = $visibility;
 		$status->scope = $visibility;
-		$status->save();
+		$status->update();
 
 		return redirect($status->url());
 	}
