@@ -57,6 +57,28 @@
 													</div>
 												</div>
 											</template>
+											<template v-if="result.is_company">
+												<div class="sr-account-stats">
+													<div class="sr-account-stats-followers text-danger font-weight-bold">
+														Company
+													</div>
+													<div>·</div>
+													<div class="sr-account-stats-followers font-weight-bold">
+														<span>{{ formatCount(result.followers_count) }}</span>
+														<span>Followers</span>
+													</div>
+												</div>
+											</template>
+											<template v-if="result.is_rolemodel">
+												<div class="sr-account-stats-followers text-danger font-weight-bold">
+													Role Model
+												</div>
+												<div>·</div>
+												<div class="sr-account-stats-followers font-weight-bold">
+													<span>{{ formatCount(result.followers_count) }}</span>
+													<span>Followers</span>
+												</div>
+											</template>
 											<template v-else>
 												<template v-if="result.local">
 													<div class="sr-account-stats">

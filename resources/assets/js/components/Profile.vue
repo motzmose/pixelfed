@@ -143,6 +143,12 @@
 										<span v-if="profile.is_admin" class="btn btn-outline-danger btn-sm py-0 mr-3" title="Admin Account" data-toggle="tooltip">
 											Admin
 										</span>
+										<span v-if="profile.is_company" class="btn btn-outline-primary btn-sm py-0 mr-3" title="Company Account" data-toggle="tooltip">
+											Company
+										</span>
+										<span v-if="profile.is_rolemodel" class="btn btn-outline-success btn-sm py-0 mr-3" title="Role Model Account" data-toggle="tooltip">
+											Role Model
+										</span>
 										<span v-if="relationship && relationship.followed_by" class="btn btn-outline-muted btn-sm py-0 mr-3">Follows You</span>
 										<span>
 											Joined {{joinedAtFormat(profile.created_at)}}

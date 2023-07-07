@@ -8,12 +8,12 @@
 						  <li class="nav-item">
 							<router-link to="/" class="nav-link">About</router-link>
 							</li>
-							<li v-if="config.show_directory" class="nav-item">
+							<!-- <li v-if="config.show_directory" class="nav-item">
 								<router-link to="/web/directory" class="nav-link">Directory</router-link>
 							</li>
 							<li v-if="config.show_explore_feed" class="nav-item">
 								<router-link to="/web/explore" class="nav-link">Explore</router-link>
-							</li>
+							</li> -->
 						</ul>
 					</div>
 

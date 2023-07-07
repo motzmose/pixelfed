@@ -768,6 +768,14 @@
 				return this.profile.is_admin == true;
 			},
 
+			company() {
+				return this.profile.is_company == true;
+			},
+
+			rolemodel() {
+				return this.profile.is_rolemodel == true;
+			},
+
 			ownerOrAdmin(status) {
 				return this.owner(status) || this.admin();
 			},

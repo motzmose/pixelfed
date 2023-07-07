@@ -30,7 +30,7 @@
 					</div>
 				</th>
 				<th scope="col" class="border-0" width="5%">
-					<span>ID</span> 
+					<span>ID</span>
 				</th>
 				<th scope="col" class="border-0" width="40%">
 					<span>Username</span>
@@ -78,7 +78,7 @@
 					</span>
 				</td>
 			</tr>
-			@else 
+			@else
 			<tr class="font-weight-bold text-center user-row">
 				<th scope="row">
 					<div class="custom-control custom-checkbox account-select-check">
@@ -98,6 +98,11 @@
 						@if($user->is_admin)
 						<i class="text-danger fas fa-certificate" title="Admin"></i>
 						@endif
+						@if($user->is_company)
+						<i class="text-primary fas fa-building" title="Company"></i>
+						@endif
+						@if($user->is_rolemodel)
+						<i class="text-success fas fa-star" title="Role Model"></i>
 					</span>
 				</td>
 				<td>

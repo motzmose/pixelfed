@@ -39,6 +39,12 @@
               @if($user && $user->is_admin == true)
                 <span class="badge badge-danger ml-3">Admin</span>
               @endif
+			  @if($user && $user->is_company == true)
+				<span class="badge badge-primary ml-3">Company</span>
+			  @endif
+			  @if($user $$ $user->is_rolemodel == true)
+				<span class="badge badge-success ml-3">Role Model</span>
+			  @endif
             </td>
           </tr>
           <tr>

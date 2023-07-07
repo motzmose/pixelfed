@@ -69,7 +69,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="{{ __('Confirm Password') }}" required>
                             </div>
                         </div>
-
+{{--
                         <div class="form-group row">
                             <div class="col-md-12">
                                 <div class="form-check">
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                         </div>
-
+ --}}
                         @if(config('captcha.enabled') || config('captcha.active.register'))
                         <div class="d-flex justify-content-center my-3">
                             {!! Captcha::display() !!}
@@ -88,7 +88,7 @@
                         @endif
 
                         <p class="small">By signing up, you agree to our <a href="{{route('site.terms')}}" class="font-weight-bold text-dark">Terms of Use</a> and <a href="{{route('site.privacy')}}" class="font-weight-bold text-dark">Privacy Policy</a>.</p>
-                        
+
                         <div class="form-group row">
                             <div class="col-md-12">
                                 <button type="submit" class="btn btn-primary btn-block py-0 font-weight-bold">

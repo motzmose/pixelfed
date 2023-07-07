@@ -12,7 +12,7 @@ class UserCreate extends Command
      *
      * @var string
      */
-    protected $signature = 'user:create {--name=} {--username=} {--email=} {--password=} {--is_admin=0} {--confirm_email=0}';
+    protected $signature = 'user:create {--name=} {--username=} {--email=} {--password=} {--is_admin=0} {--is_company=0} {--is_rolemodel=0} {--confirm_email=0}';
 
     /**
      * The console command description.
@@ -53,6 +53,8 @@ class UserCreate extends Command
             $user->email = $o['email'];
             $user->password = bcrypt($o['password']);
             $user->is_admin = $o['is_admin'] == 'true';
+			$user->is_company = $o['is_company'] == 'false';
+			$user->is_rolemodel = $o['is_rolemodel'] == 'false';
             $user->email_verified_at = $o['confirm_email'] ? now() : null;
             $user->save();
 
@@ -83,19 +85,21 @@ class UserCreate extends Command
             $this->error('Password mismatch, please try again...');
             exit;
         }
-        
+
         if (strlen($password) < 6) {
             $this->error('Must be 6 or more characters, please try again...');
             exit;
         }
-        
+
         $is_admin = $this->confirm('Make this user an admin?');
+		$is_company = $this->confirm('Make this user a company?');
+		$is_rolemodel = $this->confirm('Make this user a rolemodel?');
         $confirm_email = $this->confirm('Manually verify email address?');
 
-        if($this->confirm('Are you sure you want to create this user?') && 
+        if($this->confirm('Are you sure you want to create this user?') &&
             $username &&
-            $name && 
-            $email && 
+            $name &&
+            $email &&
             $password
         ) {
             $user = new User;
@@ -104,6 +108,8 @@ class UserCreate extends Command
             $user->email = $email;
             $user->password = bcrypt($password);
             $user->is_admin = $is_admin;
+			$user->is_company = $is_company;
+			$user->is_rolemodel = $is_rolemodel;
             $user->email_verified_at = $confirm_email ? now() : null;
             $user->save();
 

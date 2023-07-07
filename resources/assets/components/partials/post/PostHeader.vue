@@ -22,6 +22,14 @@
 						<span class="badge badge-light text-danger user-select-none" title="Admin account">ADMIN</span>
 						<span class="mx-1 text-lighter">·</span>
 					</span>
+					<span v-if="status.account.is_company" class="d-none d-md-inline-block">
+						<span class="badge badge-light text-primary user-select-none" title="Company account">COMPANY</span>
+						<span class="mx-1 text-lighter">·</span>
+					</span>
+					<span v-if="status.account.is_rolemodel" class="d-none d-md-inline-block">
+						<span class="badge badge-light text-success user-select-none" title="Role model account">ROLE MODEL</span>
+						<span class="mx-1 text-lighter">·</span>
+					</span>
 					<a class="timestamp text-lighter" :href="status.url" @click.prevent="goToPost()" :title="status.created_at">
 						{{ timeago(status.created_at) }}
 					</a>

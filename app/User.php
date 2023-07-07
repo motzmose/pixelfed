@@ -39,8 +39,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'email', 'password', 'is_admin', 'remember_token', 
-        'email_verified_at', '2fa_enabled', '2fa_secret', 
+        'email', 'password', 'is_admin', 'remember_token', 'is_company', 'is_rolemodel',
+        'email_verified_at', '2fa_enabled', '2fa_secret',
         '2fa_backup_codes', '2fa_setup_at', 'deleted_at',
         'updated_at'
     ];

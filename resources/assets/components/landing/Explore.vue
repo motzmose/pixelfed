@@ -3,7 +3,7 @@
 		<section class="page-wrapper">
 			<div class="container container-compact">
 				<div class="card bg-bluegray-900" style="border-radius: 10px;">
-					<div class="card-header bg-bluegray-800 nav-menu" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+					<!-- <div class="card-header bg-bluegray-800 nav-menu" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
 						<ul class="nav justify-content-around">
 						  <li class="nav-item">
 							<router-link to="/" class="nav-link">About</router-link>
@@ -33,7 +33,7 @@
 								:post="post"
 								:range="ranges[rangeIndex]" />
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 

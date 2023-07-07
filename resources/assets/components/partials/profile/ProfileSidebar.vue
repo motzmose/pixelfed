@@ -46,6 +46,8 @@
 				<div>
 					<img :src="getAvatar()" class="avatar img-fluid shadow border" onerror="this.onerror=null;this.src='/storage/avatars/default.png?v=0';">
 					<p v-if="profile.is_admin" class="text-right" style="margin-top: -30px;"><span class="admin-label">Admin</span></p>
+					<p v-if="profile.is_company" class="text-right" style="margin-top: -30px;"><span class="company-label">Company</span></p>
+					<p v-if="profile.is_rolemodel" class="text-right" style="margin-top: -30px;"><span class="rolemodel-label">Role Model</span></p>
 				</div>
 				<!-- <button class="btn btn-link">
 					<i class="far fa-lg fa-cog text-lighter"></i>

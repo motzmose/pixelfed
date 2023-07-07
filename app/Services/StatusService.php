@@ -76,6 +76,8 @@ class StatusService
 			$status['pinned'],
 			$status['account']['header_bg'],
 			$status['account']['is_admin'],
+			$status['account']['is_company'],
+			$status['account']['is_rolemodel'],
 			$status['account']['last_fetched_at'],
 			$status['account']['local'],
 			$status['account']['location'],
