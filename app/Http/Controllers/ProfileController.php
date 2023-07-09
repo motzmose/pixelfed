@@ -123,6 +123,7 @@ class ProfileController extends Controller
 			$is_admin = is_null($user->domain) ? $user->user->is_admin : false;
 			$is_company = is_null($user->domain) ? $user->user->is_company : false;
 			$is_rolemodel = is_null($user->domain) ? $user->user->is_rolemodel : false;
+			$is_team = is_null($user->domain) ? $user->user->is_team : false;
 
 			$profile = $user;
 			$settings = [

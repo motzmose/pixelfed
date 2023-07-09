@@ -776,6 +776,10 @@
 				return this.profile.is_rolemodel == true;
 			},
 
+			team(){
+				return this.profile.is_team == true;
+			},
+
 			ownerOrAdmin(status) {
 				return this.owner(status) || this.admin();
 			},

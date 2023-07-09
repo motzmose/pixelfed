@@ -48,6 +48,7 @@
 					<p v-if="profile.is_admin" class="text-right" style="margin-top: -30px;"><span class="admin-label">Admin</span></p>
 					<p v-if="profile.is_company" class="text-right" style="margin-top: -30px;"><span class="company-label">Company</span></p>
 					<p v-if="profile.is_rolemodel" class="text-right" style="margin-top: -30px;"><span class="rolemodel-label">Role Model</span></p>
+					<p v-if="profile.is_team" class="text-right" style="margin-top: -30px;"><span class="team-label">Team</span></p>
 				</div>
 				<!-- <button class="btn btn-link">
 					<i class="far fa-lg fa-cog text-lighter"></i>

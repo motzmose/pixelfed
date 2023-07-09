@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->boolean('is_rolemodel')->default(false);
 			$table->boolean('is_company')->default(false);
+            $table->boolean('is_team')->default(false);
         });
     }
 
@@ -23,7 +24,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['rolemodel', 'company_roles']);
+            $table->dropColumn(['rolemodel', 'company_roles', 'is_team']);
         });
     }
 };

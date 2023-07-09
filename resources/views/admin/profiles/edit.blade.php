@@ -45,6 +45,9 @@
 			  @if($user $$ $user->is_rolemodel == true)
 				<span class="badge badge-success ml-3">Role Model</span>
 			  @endif
+        @if($user && $user->is_team == true)
+        <span class="badge badge-warning ml-3">Team</span>
+        @endif
             </td>
           </tr>
           <tr>

@@ -18,6 +18,7 @@ class AccountWithStatusesTransformer extends Fractal\TransformerAbstract
 		$local = $profile->domain == null;
 		$is_admin = !$local ? false : $profile->user->is_admin;
 		$is_company = !$local ? false : $profile->user->is_company;
+		$is_team = !$local ? false : $profile->user->is_team;
 		$is_rolemodel = !$local ? false : $profile->user->is_rolemodel;
 		$acct = $local ? $profile->username : substr($profile->username, 1);
 		$username = $local ? $profile->username : explode('@', $acct)[0];
@@ -38,6 +39,7 @@ class AccountWithStatusesTransformer extends Fractal\TransformerAbstract
 			'is_admin' => (bool) $is_admin,
 			'is_company' => (bool) $is_company,
 			'is_rolemodel' => (bool) $is_rolemodel,
+			'is_team' => (bool) $is_team,
 			'created_at' => $profile->created_at->timestamp
 		];
 	}

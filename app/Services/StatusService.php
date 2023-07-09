@@ -78,6 +78,7 @@ class StatusService
 			$status['account']['is_admin'],
 			$status['account']['is_company'],
 			$status['account']['is_rolemodel'],
+			$status['account']['is_team'],
 			$status['account']['last_fetched_at'],
 			$status['account']['local'],
 			$status['account']['location'],

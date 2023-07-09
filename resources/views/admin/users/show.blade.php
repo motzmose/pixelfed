@@ -68,6 +68,11 @@
 					<span class="badge badge-success badge-sm">ROLE MODEL</span>
 				</p>
 				@endif
+				@if($user->is_team == true)
+				<p class="mb-0">
+					<span class="badge badge-warning badge-sm">TEAM</span>
+				</p>
+				@endif
 				<p class="mb-0 text-center text-muted">
 					Joined {{$profile->created_at->diffForHumans()}}
 				</p>

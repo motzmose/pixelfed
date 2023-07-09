@@ -79,6 +79,16 @@
 													<span>Followers</span>
 												</div>
 											</template>
+											<template v-if="result.is_team">
+												<div class="sr-account-stats-followers text-danger font-weight-bold">
+													Team
+												</div>
+												<div>·</div>
+												<div class="sr-account-stats-followers font-weight-bold">
+													<span>{{ formatCount(result.followers_count) }}</span>
+													<span>Followers</span>
+												</div>
+											</template>
 											<template v-else>
 												<template v-if="result.local">
 													<div class="sr-account-stats">

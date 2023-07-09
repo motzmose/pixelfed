@@ -52,6 +52,7 @@ class AccountService
 			$account['is_admin'],
 			$account['is_company'],
 			$account['is_rolemodel'],
+			$account['is_team'],
 			$account['last_fetched_at'],
 			$account['local'],
 			$account['location'],

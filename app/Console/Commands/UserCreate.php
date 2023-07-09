@@ -12,7 +12,7 @@ class UserCreate extends Command
      *
      * @var string
      */
-    protected $signature = 'user:create {--name=} {--username=} {--email=} {--password=} {--is_admin=0} {--is_company=0} {--is_rolemodel=0} {--confirm_email=0}';
+    protected $signature = 'user:create {--name=} {--username=} {--email=} {--password=} {--is_admin=0} {--is_company=0} {--is_rolemodel=0} {--is_team=0} {--confirm_email=0}';
 
     /**
      * The console command description.
@@ -55,6 +55,7 @@ class UserCreate extends Command
             $user->is_admin = $o['is_admin'] == 'true';
 			$user->is_company = $o['is_company'] == 'false';
 			$user->is_rolemodel = $o['is_rolemodel'] == 'false';
+            $user->is_team = $o['is_team'] == 'false';
             $user->email_verified_at = $o['confirm_email'] ? now() : null;
             $user->save();
 
@@ -94,6 +95,7 @@ class UserCreate extends Command
         $is_admin = $this->confirm('Make this user an admin?');
 		$is_company = $this->confirm('Make this user a company?');
 		$is_rolemodel = $this->confirm('Make this user a rolemodel?');
+        $is_team = $this->confirm('Make this user a team member?');
         $confirm_email = $this->confirm('Manually verify email address?');
 
         if($this->confirm('Are you sure you want to create this user?') &&
@@ -110,6 +112,7 @@ class UserCreate extends Command
             $user->is_admin = $is_admin;
 			$user->is_company = $is_company;
 			$user->is_rolemodel = $is_rolemodel;
+            $user->is_team = $is_team;
             $user->email_verified_at = $confirm_email ? now() : null;
             $user->save();
 

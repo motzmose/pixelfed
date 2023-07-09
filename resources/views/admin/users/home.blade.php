@@ -103,6 +103,10 @@
 						@endif
 						@if($user->is_rolemodel)
 						<i class="text-success fas fa-star" title="Role Model"></i>
+						@endif
+						@if($user->is_team)
+						<i class="text-warning fas fa-users" title="Team"></i>
+						@endif
 					</span>
 				</td>
 				<td>

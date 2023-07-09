@@ -75,6 +75,10 @@
 						<i class="fas fa-certificate text-success fa-stack-1x"></i>
 						<i class="fas fa-user-check text-white fa-sm fa-stack-1x" style="font-size:7px;"></i>
 					</span>
+					<span v-if="status.account.is_team" class="fa-stack" title="Team Account" data-toggle="tooltip" style="height:1em; line-height:1em; max-width:19px;">
+						<i class="fas fa-certificate text-info fa-stack-1x"></i>
+						<i class="fas fa-users text-white fa-sm fa-stack-1x" style="font-size:7px;"></i>
+					</span>
 					<div class="d-flex align-items-center">
 						<a v-if="status.place" class="small text-decoration-none text-muted" :href="'/discover/places/'+status.place.id+'/'+status.place.slug" title="Location" data-toggle="tooltip"><i class="fas fa-map-marked-alt"></i> {{status.place.name}}, {{status.place.country}}</a>
 					</div>
@@ -390,6 +394,10 @@
 
 			rolemodel() {
 				return this.profile.is_rolemodel == true;
+			},
+
+			team() {
+				return this.profile.is_team == true;
 			},
 
 			ownerOrAdmin(status) {

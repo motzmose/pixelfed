@@ -30,6 +30,10 @@
 						<span class="badge badge-light text-success user-select-none" title="Role model account">ROLE MODEL</span>
 						<span class="mx-1 text-lighter">·</span>
 					</span>
+					<span v-if="status.account.is_team" class="d-none d-md-inline-block">
+						<span class="badge badge-light text-info user-select-none" title="Team account">TEAM</span>
+						<span class="mx-1 text-lighter">·</span>
+					</span>
 					<a class="timestamp text-lighter" :href="status.url" @click.prevent="goToPost()" :title="status.created_at">
 						{{ timeago(status.created_at) }}
 					</a>
