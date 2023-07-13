@@ -28,7 +28,7 @@
 				<div v-else class="notifications-component-feed">
 					<template v-if="isEmpty">
 						<div class="d-flex align-items-center justify-content-center flex-column bg-light rounded-lg p-3 mb-3" style="min-height: 100px;">
-							<i class="fal fa-bell fa-2x text-lighter"></i>
+							<i class="fa fa-bell fa-2x text-lighter"></i>
 							<p class="mt-2 small font-weight-bold text-center mb-0">{{ $t('notifications.noneFound') }}</p>
 						</div>
 					</template>

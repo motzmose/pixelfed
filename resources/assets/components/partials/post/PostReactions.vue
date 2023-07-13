@@ -86,7 +86,7 @@
 				</button>
 
 				<button v-if="admin" type="button" class="ml-3 btn btn-light font-weight-bold rounded-pill" v-b-tooltip.hover title="Moderation Tools" @click="openModTools()">
-					<i class="far fa-user-crown"></i>
+					<i class="fa fa-crown"></i>
 				</button>
 			</div>
 		</div>

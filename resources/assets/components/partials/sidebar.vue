@@ -32,7 +32,7 @@
 				<i class="fal fa-arrow-circle-up mr-1"></i> {{ $t('navmenu.compose') }} Post
 			</button> -->
 			<router-link to="/i/web/compose" class="btn btn-primary btn-block font-weight-bold">
-				<i class="fal fa-arrow-circle-up mr-1"></i> {{ $t('navmenu.compose') }} Post
+				<i class="fa fa-arrow-circle-up mr-1"></i> {{ $t('navmenu.compose') }} Post
 			</router-link>
 			<button type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-expanded="false">
 				<span class="sr-only">Toggle Dropdown</span>
@@ -253,7 +253,7 @@
 
 		<div class="sidebar-attribution pr-3 d-flex justify-content-between align-items-center">
 			<router-link to="/i/web/language">
-				<i class="fal fa-language fa-2x" alt="Select a language"></i>
+				<i class="fa fa-language fa-2x" alt="Select a language"></i>
 			</router-link>
 			<a href="/site/help" class="font-weight-bold">{{ $t('navmenu.help') }}</a>
 			<a href="/site/privacy" class="font-weight-bold">{{ $t('navmenu.privacy') }}</a>

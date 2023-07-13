@@ -242,7 +242,7 @@
 								<div @click.prevent="addMedia" class="card-body py-2">
 									<div class="media">
 										<div class="mr-3 align-items-center justify-content-center" style="display:inline-flex;width:40px;height:40px;border-radius: 100%;background-color: #008DF5">
-											<i class="fal fa-bolt text-white fa-lg"></i>
+											<i class="fa fa-bolt text-white fa-lg"></i>
 										</div>
 										<div class="media-body text-left">
 											<p class="mb-0">
@@ -316,7 +316,7 @@
 								<div class="card-body py-2">
 									<div class="media">
 										<div class="mr-3 align-items-center justify-content-center" style="display:inline-flex;width:40px;height:40px;border-radius: 100%;border: 1px solid #008DF5">
-											<i class="fal fa-images text-primary fa-lg"></i>
+											<i class="fa fa-images text-primary fa-lg"></i>
 										</div>
 										<div class="media-body text-left">
 											<p class="mb-0">
