@@ -60,6 +60,10 @@ class ProfileController extends Controller
 		if($aiCheck) {
 			return redirect('/login');
 		}
+
+		if(!$request->user()){
+			return redirect('/login');
+		};
 		return $this->buildProfile($request, $user);
 	}
 

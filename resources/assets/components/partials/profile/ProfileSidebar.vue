@@ -690,14 +690,52 @@
 		.admin-label {
 			padding: 1px 5px;
 			font-size: 12px;
-			color: #B91C1C;
-			background: #FEE2E2;
-			border: 1px solid #FCA5A5;
+			color: #e0e0e0;
+			background: #ff4c4c;
+			border: 1px solid #a10000;
 			font-weight: 600;
 			text-transform: capitalize;
 			display: inline-block;
 			border-radius: 8px;
 		}
+
+		.company-label {
+			padding: 1px 5px;
+			font-size: 12px;
+			color: #164B60;
+			background: #4FC0D0;
+			border: 1px solid #1B6B93;
+			font-weight: 600;
+			text-transform: capitalize;
+			display: inline-block;
+			border-radius: 8px;
+		}
+
+		.rolemodel-label {
+			padding: 1px 5px;
+			font-size: 12px;
+			color: #276749;
+			background: #D1FAE5;
+			border: 1px solid #34D399;
+			font-weight: 600;
+			text-transform: capitalize;
+			display: inline-block;
+			border-radius: 8px;
+		}
+
+		.team-label {
+			padding: 1px 5px;
+			font-size: 12px;
+			color: #FF6666;
+			background: #f6d8d8;
+			border: 1px solid #FF8989;
+			font-weight: 600;
+			text-transform: capitalize;
+			display: inline-block;
+			border-radius: 8px;
+		}
+
+
 
 		.sidebar-sitelinks {
 			margin-top: 1rem;

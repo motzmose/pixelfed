@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\User;
 
 class UserCompany extends Command
 {
@@ -11,7 +12,7 @@ class UserCompany extends Command
      *
      * @var string
      */
-    protected $signature = 'user:company';
+    protected $signature = 'user:company {id}';
 
     /**
      * The console command description.

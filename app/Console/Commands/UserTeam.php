@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\User;
 
 class UserTeam extends Command
 {
@@ -11,7 +12,7 @@ class UserTeam extends Command
      *
      * @var string
      */
-    protected $signature = 'user:team';
+    protected $signature = 'user:team {id}';
 
     /**
      * The console command description.
@@ -41,7 +42,7 @@ class UserTeam extends Command
         if(!$confirmed) {
             exit;
         }
-        
+
         $user->is_team = !$user->is_team;
         $user->save();
         $this->info('Successfully changed permissions!');

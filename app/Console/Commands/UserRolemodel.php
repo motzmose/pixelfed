@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\User;
 
 class UserRolemodel extends Command
 {
@@ -11,7 +12,7 @@ class UserRolemodel extends Command
      *
      * @var string
      */
-    protected $signature = 'user:rolemodel';
+    protected $signature = 'user:rolemodel {id}';
 
     /**
      * The console command description.
